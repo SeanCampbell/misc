@@ -3,4 +3,5 @@ parse_git_branch() {
 }
 
 autoload -U colors && colors
-PS1="%{$fg[red]%}%n%{$reset_color%} %{$fg[green]%}%~%{$fg[blue]%}$(parse_git_branch) %{$reset_color%}%% "
+setopt PROMPT_SUBST
+PROMPT='%{$fg[red]%}%n%{$reset_color%} %{$fg[green]%}%~%{$fg[blue]%}$(parse_git_branch) %{$reset_color%}%% '
